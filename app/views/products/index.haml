@@ -3,4 +3,11 @@
   .product
     %p= "---- #{product.name} ----"
     %p= "Price: #{product.price}"
-    %p= "Available since #{time_ago_in_words(product.created_at)} ago."
+    %p= "Added #{time_ago_in_words(product.created_at)} ago."
+
+    .product-extras
+    %p= "Comments: #{product.comments.count}"
+    - product.comments.each do |comment|
+      %p= "> #{comment.content}"
+    = button_to 'Add your comment!', new_product_comment_path(product.id), { method: 'get' }
+    = button_to 'Add to shopping cart', new_product_comment_path(product.id), { method: 'get' }
