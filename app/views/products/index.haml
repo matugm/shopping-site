@@ -1,0 +1,6 @@
+%h2 Product list
+- @products.each do |product|
+  .product
+    %p= "---- #{product.name} ----"
+    %p= "Price: #{product.price}"
+    %p= "Available since #{time_ago_in_words(product.created_at)} ago."

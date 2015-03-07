@@ -19,6 +19,7 @@ gem 'twitter-bootstrap-rails'
 gem 'puma'
 gem 'quiet_assets'
 gem 'rspec-rails'
+gem 'haml-rails'
 ##############3
 
 # Use jquery as the JavaScript library
