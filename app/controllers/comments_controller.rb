@@ -10,7 +10,6 @@ class CommentsController < ApplicationController
       flash[:error] = @product.errors
       redirect_to new_product_comment_path(@product.id)
     end
-
   end
 
   def new
