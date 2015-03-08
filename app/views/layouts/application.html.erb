@@ -12,6 +12,7 @@
   <% if current_user %>
     Hello <%= current_user.email %>!
     You have <%= shopping_cart_count %> items in your cart.
+    <%= link_to 'Checkout / Edit your cart', view_cart_path %>
   <% end %>
 </div>
 

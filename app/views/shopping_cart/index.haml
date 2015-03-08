@@ -1,0 +1,9 @@
+
+%h2 Your cart
+- @cart.each do |item|
+  %p
+  = "Item name: #{item.product.name} - Quantity: #{item.quantity} - "
+  = link_to 'delete', shopping_cart_delete_path(item.product), { method: 'post' }
+
+- total = @cart.inject(0) { |sum, item| sum + (item.product.price * item.quantity) }
+%p= "Total: #{total}"
