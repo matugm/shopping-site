@@ -1,4 +1,6 @@
 class ShoppingCartController < ApplicationController
+  before_filter :authenticate_user!
+
   def add
     @cart = ShoppingCart.find_or_create_by(user: current_user, product_id: params[:product_id])
 
