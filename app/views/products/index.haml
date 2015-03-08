@@ -1,4 +1,8 @@
 %h2 Product list
+
+- if flash[:notice]
+  .notice= flash[:notice]
+
 - @products.each do |product|
   .product
     %p= "---- #{product.name} ----"

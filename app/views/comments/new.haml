@@ -1,4 +1,7 @@
 
+- if flash[:error]
+  .alert Invalid comment
+
 %form{ method:'post', action: product_comments_path }
   %p [ #{@product.name} ] - Write your new comment.
   %textarea{ name: 'content' }

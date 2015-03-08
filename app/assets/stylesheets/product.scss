@@ -5,3 +5,23 @@
 .product {
   border: 1px solid black;
 }
+
+.alert, .notice {
+  background-color: #9c1f00;
+  padding: 9px;
+  margin-top: 5px;
+  width: 50%;
+  color: white;
+}
+
+.notice {
+  background-color: #0b9d40;
+}
+
+.cart_index {
+  padding: 5px;
+}
+
+.cart_index th, td {
+padding: 5px 10px 0 0;
+}
