@@ -13,6 +13,8 @@
     Hello <%= current_user.email %>!
     You have <%= shopping_cart_count %> items in your cart.
     <%= link_to 'Checkout / Edit your cart', view_cart_path %>
+  <% else %>
+    <%= link_to 'Login to start shopping!', new_user_session_path %>
   <% end %>
 </div>
 
