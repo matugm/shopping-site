@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<div>
+  <% if current_user %>
+    Hello <%= current_user.email %>!
+    You have <%= shopping_cart_count %> items in your cart.
+  <% end %>
+</div>
+
 <%= yield %>
 
 </body>

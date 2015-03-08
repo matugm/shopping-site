@@ -10,4 +10,4 @@
     - product.comments.each do |comment|
       %p= "> #{comment.content}"
     = button_to 'Add your comment!', new_product_comment_path(product.id), { method: 'get' }
-    = button_to 'Add to shopping cart', new_product_comment_path(product.id), { method: 'get' }
+    = button_to 'Add to shopping cart', shopping_cart_add_path(product.id), { method: 'post' }
