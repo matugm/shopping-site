@@ -1,0 +1,8 @@
+<% if current_user %>
+  Hello <strong><%= current_user.email %></strong>!
+  You have <%= shopping_cart_count %> items in your cart.
+  <%= link_to 'Checkout / Edit your cart', view_cart_path,
+    { style: 'display: inline', class: 'btn btn-primary' } %>
+<% else %>
+  <%= link_to 'Login to start shopping!', new_user_session_path %>
+<% end %>

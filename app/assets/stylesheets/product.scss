@@ -2,8 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.product {
-  border: 1px solid black;
+.product-wrapper {
+  border: 1px solid silver;
+}
+
+.navbar-text {
+  color: #525252 !important;
+}
+
+.container {
+  margin-top: 20px;
 }
 
 .alert-custom, .notice {

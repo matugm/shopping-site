@@ -1,0 +1,5 @@
+
+%legend= "#{product.name}"
+
+- product.comments.each do |comment|
+  %p= "> #{comment.content}"

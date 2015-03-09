@@ -1,18 +1,16 @@
-%h2 Product list
-
 - if flash[:notice]
   .alert-success.alert= flash[:notice]
 
+%h2 Product list
+
 .row
 - @products.each do |product|
-  .col-md-4.well
-    %p= "---- #{product.name} ----"
-    %p= "Price: #{product.price}"
-    %p= "Added #{time_ago_in_words(product.created_at)} ago."
+  .col-md-4
+    .product-wrapper.well
+      %legend= "#{product.name.capitalize}"
+      %p= "Price: #{product.price}"
+      %p= "Added #{time_ago_in_words(product.created_at)} ago."
 
-    .product-extras
-    %p= "Comments: #{product.comments.count}"
-    - product.comments.each do |comment|
-      %p= "> #{comment.content}"
-    = button_to 'Add your comment!', new_product_comment_path(product.id), { method: 'get', class: 'btn btn-primary' }
-    = shopping_cart_button(product.id)
+      %p= "Comments: #{product.comments.count}"
+      = button_to 'Add your comment!', new_product_comment_path(product.id), { method: 'get', class: 'btn btn-primary' }
+      = shopping_cart_button(product.id)
