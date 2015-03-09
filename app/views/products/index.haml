@@ -1,10 +1,11 @@
 %h2 Product list
 
 - if flash[:notice]
-  .notice= flash[:notice]
+  .alert-success.alert= flash[:notice]
 
+.row
 - @products.each do |product|
-  .product
+  .col-md-4.well
     %p= "---- #{product.name} ----"
     %p= "Price: #{product.price}"
     %p= "Added #{time_ago_in_words(product.created_at)} ago."
@@ -13,5 +14,5 @@
     %p= "Comments: #{product.comments.count}"
     - product.comments.each do |comment|
       %p= "> #{comment.content}"
-    = button_to 'Add your comment!', new_product_comment_path(product.id), { method: 'get' }
+    = button_to 'Add your comment!', new_product_comment_path(product.id), { method: 'get', class: 'btn btn-primary' }
     = shopping_cart_button(product.id)

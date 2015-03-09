@@ -1,6 +1,6 @@
 
 %h2 Your cart
-%table.cart_index
+%table.table.table-striped
   %th Item name
   %th Quantity
   %th Actions
@@ -8,7 +8,7 @@
     %tr
       %td= "#{item.product.name}"
       %td= "#{item.quantity}"
-      %td= link_to 'delete', shopping_cart_delete_path(item.product), { method: 'post' }
+      %td= button_to 'delete', shopping_cart_delete_path(item.product), { method: 'post', class: 'btn btn-sm btn-danger' }
 
 %p
 = "Total: #{calculate_total}"

@@ -1,9 +1,11 @@
 
-- if flash[:error]
-  .alert Invalid comment
 
-%form{ method:'post', action: product_comments_path }
-  %p [ #{@product.name} ] - Write your new comment.
-  %textarea{ name: 'content' }
-  %br
-  = button_to "Submit"
+%div{ style: 'width: 30%; margin-top: 10px' }
+  - if flash[:error]
+    .alert.alert-warning Invalid comment
+
+  %form{ method:'post', action: product_comments_path }
+    %legend Write your new comment.
+    %textarea.form-control{ name: 'content' }
+    %br
+    = button_to "Submit", product_comments_path , { method: 'post', class: 'btn btn-sm btn-success' }

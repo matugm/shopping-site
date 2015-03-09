@@ -6,7 +6,7 @@
   border: 1px solid black;
 }
 
-.alert, .notice {
+.alert-custom, .notice {
   background-color: #9c1f00;
   padding: 9px;
   margin-top: 5px;
@@ -19,10 +19,12 @@
   background-color: #0b9d40;
 }
 
-.cart_index {
-  padding: 5px;
+.table {
+  width: 25%;
+  margin-left: 10px;
 }
 
-.cart_index th, td {
-padding: 5px 10px 0 0;
+textarea {
+  width: 250px;
+  height: 90px !important;
 }
