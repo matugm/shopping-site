@@ -1,13 +1,14 @@
 
-%legend= "#{@product.name.capitalize}"
+.product-wrapper.well
+  %legend= "#{@product.name.capitalize}"
 
-%p
-  = button_to 'Add your comment!', new_product_comment_path(@product.id), { method: 'get', class: 'btn btn-primary' }
+  %p
+    = button_to 'Add your comment!', new_product_comment_path(@product.id), { method: 'get', class: 'btn btn-primary' }
 
-- if @product.comments.any?
-  %p Comments:
-- else
-  %p No comments.
+  - if @product.comments.any?
+    %p Comments:
+  - else
+    %p No comments.
 
-- @product.comments.each do |comment|
-  %p= "> #{comment.content}"
+  - @product.comments.each do |comment|
+    %p= "> #{comment.content}"

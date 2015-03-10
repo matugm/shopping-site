@@ -8,7 +8,7 @@
   .col-md-4
     .product-wrapper.well
       %legend
-        = link_to product.name.capitalize, product_path(product.id)
+        = link_to product.name.capitalize, product
       %p= "Price: #{product.price}"
       %p= "Added #{time_ago_in_words(product.created_at)} ago."
 
