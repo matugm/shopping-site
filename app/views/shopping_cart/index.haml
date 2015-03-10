@@ -1,13 +1,17 @@
+- if flash[:notice]
+  .alert-success.alert= flash[:notice]
 
-%h2 Your cart
+%h3 Your cart
 %table.table.table-striped
   %th Item name
   %th Quantity
+  %th Unit price
   %th Actions
   - @cart.each do |item|
     %tr
       %td= "#{item.product.name}"
       %td= "#{item.quantity}"
+      %td= "#{item.product.price}"
       %td= button_to 'delete', shopping_cart_delete_path(item.product), { method: 'post', class: 'btn btn-sm btn-danger' }
 
 %p

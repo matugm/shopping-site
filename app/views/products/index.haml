@@ -7,10 +7,10 @@
 - @products.each do |product|
   .col-md-4
     .product-wrapper.well
-      %legend= "#{product.name.capitalize}"
+      %legend
+        = link_to product.name.capitalize, product_path(product.id)
       %p= "Price: #{product.price}"
       %p= "Added #{time_ago_in_words(product.created_at)} ago."
 
       %p= "Comments: #{product.comments.count}"
-      = button_to 'Add your comment!', new_product_comment_path(product.id), { method: 'get', class: 'btn btn-primary' }
       = shopping_cart_button(product.id)
