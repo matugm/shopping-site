@@ -4,14 +4,7 @@
 
 .product-wrapper {
   border: 1px solid silver;
-}
-
-.navbar-text {
-  color: #525252 !important;
-}
-
-.container {
-  margin-top: 20px;
+  box-shadow: 0px 0px 4px 1px #C4C4C4;
 }
 
 .alert-custom, .notice {
@@ -28,8 +21,8 @@
 }
 
 .table {
-  width: 35%;
-  margin-left: 10px;
+  width: 100%;
+  margin-left: 0px;
 }
 
 textarea {
@@ -46,8 +39,4 @@ body {
   background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
   background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 */
-}
-
-.table-striped>tbody>tr:nth-of-type(odd) {
-  background-color: #EDEDED;
 }

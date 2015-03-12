@@ -1,0 +1,25 @@
+
+.col-md-4.product-wrapper.well
+  %legend Sign up
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    - if resource.errors.any?
+      .alert.alert-info= resource.errors.to_a.join("<br>").html_safe
+
+    .field.form-group
+      = f.label :email
+      %br/
+      = f.email_field :email, autofocus: true, class: 'form-control'
+    .field.form-group
+      = f.label :password
+      - if @validatable
+        %em
+          (#{@minimum_password_length} characters minimum)
+      %br/
+      = f.password_field :password, autocomplete: "off", class: 'form-control'
+    .field.form-group
+      = f.label :password_confirmation
+      %br/
+      = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
+    .actions
+      = f.submit "Sign up", class: 'btn btn-success'
+  = render "devise/shared/links"

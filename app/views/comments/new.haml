@@ -1,7 +1,7 @@
 
 %div{ style: 'width: 35%; margin-top: 10px' }
   - if flash[:error]
-    .alert.alert-warning Invalid comment
+    .alert.alert-info= flash[:error]
 
   %form{ method:'post', action: product_comments_path }
     %legend Write your new comment.

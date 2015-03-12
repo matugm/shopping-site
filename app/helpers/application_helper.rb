@@ -1,6 +1,6 @@
 module ApplicationHelper
   def shopping_cart_count
-    ShoppingCart.count(user: current_user)
+    ShoppingCart.where(user: current_user).count
   end
 
   def shopping_cart_button(id)

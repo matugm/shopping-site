@@ -6,11 +6,12 @@
 .row
 - @products.each do |product|
   .col-md-4
-    .product-wrapper.well
-      %legend
-        = link_to product.name.capitalize, product
-      %p= "Price: #{product.price}"
-      %p= "Added #{time_ago_in_words(product.created_at)} ago."
+    .panel.panel-primary
+      .panel-heading
+        %h3.panel-title= link_to product.name.capitalize, product
+      .panel-body
+        %p= "Price: #{product.price}"
+        %p= "Added #{time_ago_in_words(product.created_at)} ago."
 
-      %p= "Comments: #{product.comments.count}"
-      = shopping_cart_button(product.id)
+        %p= "Comments: #{product.comments.count}"
+        = shopping_cart_button(product.id)

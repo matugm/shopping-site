@@ -1,0 +1,21 @@
+/* Tweak / override bootstrap styles */
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: #EDEDED;
+}
+
+input[type="checkbox"]:after, .checkbox input[type="checkbox"]:after, .checkbox-inline input[type="checkbox"]:after {
+  margin-left: 26px;
+}
+
+input[type="checkbox"]:checked:before, .checkbox input[type="checkbox"]:checked:before, .checkbox-inline input[type="checkbox"]:checked:before {
+  margin-left: 26px;
+}
+
+.navbar-text {
+  color: #525252 !important;
+}
+
+.container {
+  margin-top: 20px;
+}
