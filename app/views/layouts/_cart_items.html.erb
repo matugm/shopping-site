@@ -1,6 +1,6 @@
 <% if current_user %>
   Hello <strong><%= current_user.email %></strong>!
-  You have <%= shopping_cart_count %> items in your cart.
+  You have <span id="item_count"><%= shopping_cart_count %></span> items in your cart.
   <%= link_to 'Checkout / Edit your cart', view_cart_path,
     { style: 'display: inline', class: 'btn btn-primary' } %>
 <% else %>

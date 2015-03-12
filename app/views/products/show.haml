@@ -6,9 +6,11 @@
     = button_to 'Add your comment!', new_product_comment_path(@product.id), { method: 'get', class: 'btn btn-primary' }
 
   - if @product.comments.any?
-    %p Comments:
+    %legend Comments
   - else
     %p No comments.
 
   - @product.comments.each do |comment|
+    %p
+      %strong= "#{comment.created_at.to_formatted_s(:short)}"
     %p= "> #{comment.content}"

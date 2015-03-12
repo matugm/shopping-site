@@ -7,11 +7,12 @@ class ShoppingCartController < ApplicationController
     @cart.increment(:quantity, 1)
 
     if @cart.save
-      flash[:notice] = "Item added to your shopping cart."
+      flash.notice = "Item added to your shopping cart."
     else
-      flash[:notice] = "Couldn't add this item to your shoppping cart."
+      flash.notice = "Couldn't add this item to your shoppping cart."
     end
 
+    response.headers['X-Message'] = flash.notice
     redirect_to :root
   end
 
