@@ -9,9 +9,12 @@
     .panel.panel-primary
       .panel-heading
         %h3.panel-title= link_to product.name.capitalize, product
-      .panel-body
-        %p= "Price: #{number_to_currency(product.price)}"
-        %p= "Added #{time_ago_in_words(product.created_at)} ago."
+      .panel-body{ style: 'text-align: center;' }
+        %img{ src: 'http://placehold.it/300x150', style: 'display: block; margin: 0 auto' }
+        %p{ style: 'font-weight: bold; font-size: 18px' }
+          = "#{number_to_currency(product.price)}"
 
-        %p= "Comments: #{product.comments.count}"
+        %p
+          = "Added #{time_ago_in_words(product.created_at)} ago."
+          = "#{pluralize(product.comments.count, 'comment')}."
         = shopping_cart_button(product.id)
