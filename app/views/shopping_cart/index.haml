@@ -1,7 +1,7 @@
 - if flash[:notice]
   .alert-success.alert= flash[:notice]
 
-.panel.panel-primary.col-md-6{ style: "padding: 15px;" }
+.panel.panel-primary.col-md-7{ style: "padding: 15px;" }
   %legend Your cart
   %table.table.table-striped
     %th Item name
@@ -10,10 +10,11 @@
     %th Actions
     - @cart.each do |item|
       %tr
-        %td= "#{item.product.name}"
-        %td= "#{item.quantity}"
-        %td= "#{item.product.price}"
+        %td= link_to item.product.name, item.product
+        %td= item.quantity
+        %td= number_to_currency(item.product.price)
         %td= button_to 'delete', shopping_cart_delete_path(item.product), { method: 'post', class: 'btn btn-sm btn-danger' }
 
   %p
-  = "Total: #{calculate_total}"
+  %strong{ style: "font-size: 17px" }
+    = "Total: #{number_to_currency(calculate_total)}"

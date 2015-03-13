@@ -24,9 +24,13 @@ div:empty {
    display: none;
 }
 
-.table {
+.custom-table {
   width: 100%;
   margin-left: 0px;
+}
+
+table th:first-child {
+  width: 350px;
 }
 
 textarea {
