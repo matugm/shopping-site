@@ -19,3 +19,7 @@ input[type="checkbox"]:checked:before, .checkbox input[type="checkbox"]:checked:
 .container {
   margin-top: 20px;
 }
+
+.alert {
+  cursor: pointer;
+}
