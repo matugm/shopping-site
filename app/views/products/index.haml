@@ -10,7 +10,7 @@
       .panel-heading
         %h3.panel-title= link_to product.name.capitalize, product
       .panel-body
-        %p= "Price: #{product.price}"
+        %p= "Price: #{number_to_currency(product.price)}"
         %p= "Added #{time_ago_in_words(product.created_at)} ago."
 
         %p= "Comments: #{product.comments.count}"
