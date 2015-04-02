@@ -40,6 +40,7 @@ gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-rvm'
 gem 'capistrano3-puma'
+gem 'dotenv-rails'
 ##########
 
 group :production do 
