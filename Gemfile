@@ -39,7 +39,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-rvm'
-######
+gem 'capistrano3-puma'
+##########
 
 group :production do 
   gem 'pg'
