@@ -18,7 +18,7 @@ gem 'puma'
 gem 'quiet_assets'
 gem 'rspec-rails'
 gem 'haml-rails'
-##############3
+################
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -29,12 +29,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
 # Use Capistrano for deployment
 gem 'capistrano'
 gem 'capistrano-rails'
@@ -43,11 +37,10 @@ gem 'capistrano3-puma'
 gem 'dotenv-rails'
 ##########
 
-group :production do 
+group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-
 
 group :development, :test do
   gem 'sqlite3'
@@ -61,4 +54,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
