@@ -12,12 +12,15 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 ###### Custom ######
+gem 'puma'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
-gem 'puma'
 gem 'quiet_assets'
 gem 'rspec-rails'
 gem 'haml-rails'
+
+gem 'factory_girl_rails'
+gem 'faker'
 ################
 
 # Use jquery as the JavaScript library
@@ -34,8 +37,7 @@ gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-rvm'
 gem 'capistrano3-puma'
-gem 'dotenv-rails'
-##########
+##############
 
 group :production do
   gem 'pg'
