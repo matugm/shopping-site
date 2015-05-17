@@ -1,17 +1,17 @@
 require 'rails_helper'
 
 describe ShoppingCart do
-  let(:cart) { ShoppingCart.new }
+  let(:cart) { build(:shopping_cart) }
 
   it "is invalid if the product doesn't exist" do
     cart.product_id = 5145
-    cart.user_id    = 1
     expect(cart).to be_invalid
+    expect(ShoppingCart.count).to eq 0
   end
 
   it "adds an item to the database if the product exist" do
-    product = Product.create(name: 'test', price: 99.99)
-    cart    = ShoppingCart.create(product: product, user_id: 1)
+    cart.save!
     expect(cart).to be_valid
+    expect(ShoppingCart.count).to eq 1
   end
 end
