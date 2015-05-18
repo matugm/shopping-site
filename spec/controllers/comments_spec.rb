@@ -2,10 +2,10 @@ require 'rails_helper'
 
 describe CommentsController do
   let(:product) { create(:product) }
-  let(:comment) { create(:comment) }
 
   it "POST #create" do
-    post(:create, content: comment.content, product_id: product.id)
+    post(:create, content: "lorem ipsum", product_id: product.id)
+    expect(Comment.count).to eq 1
     expect(response).to redirect_to(:root)
   end
 end

@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
       flash[:notice] = "Comment has been added."
       redirect_to :root
     else
-      flash[:error] = @comment.errors.to_a.join("<br>").html_safe
+      flash[:error] = @comment.errors.full_messages
       redirect_to new_product_comment_path(@product)
     end
   end

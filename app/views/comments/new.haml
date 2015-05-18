@@ -1,7 +1,6 @@
 
 %div{ style: 'width: 35%; margin-top: 10px' }
-  - if flash[:error]
-    .alert.alert-info= flash[:error]
+  = render "alert" if flash[:error]
 
   %form{ method:'post', action: product_comments_path }
     %legend Write your new comment.
